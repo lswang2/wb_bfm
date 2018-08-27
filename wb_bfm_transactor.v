@@ -75,6 +75,9 @@ module wb_bfm_transactor # (
    integer cnt_bte_wrap_4  = 0;
    integer cnt_bte_wrap_8  = 0;
    integer cnt_bte_wrap_16 = 0;
+	
+   integer                   transaction;
+   integer                   subtransaction;
 
   // Check Cycle Probability values add up to 100
   initial begin
@@ -359,9 +362,6 @@ endfunction
    reg [1:0]                 burst_type;
 
    reg [2:0]                 cycle_type;
-
-   integer                   transaction;
-   integer                   subtransaction;
 
    reg                       err;
 
